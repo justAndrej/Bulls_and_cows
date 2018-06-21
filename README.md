@@ -2,6 +2,6 @@
 
 Simple 4 digit game.
 
-For icon thanks to Austin Andrews, materialdesignicons.com.
+APK file contains in root directory(bulls&cows.apk).
 
-APK file contains in root directory(Bulls&cows.apk).
+For icon thanks to Austin Andrews, materialdesignicons.com.
