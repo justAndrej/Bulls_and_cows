@@ -18,9 +18,6 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity {
     private static final String HARD_LEVEL = "Hard Level";
 
-//    private int mHardLevel, mAttempts, mAttemptsUsed, mUserscore, mBulls, mCows;
-//    mHardLevel = mAttempts = mAttemptsUsed = mUserscore = mBulls = mCows = 0;
-
     private int mHardLevel = 0, mAttempts = 0, mAttemptsUsed = 0, mBulls = 0, mCows = 0, mUserscore = 0;
     private boolean mIsInfinity = false;
     private int[] mRandomValue, mUserValue = new int[4];
@@ -52,8 +49,6 @@ public class GameActivity extends AppCompatActivity {
 
         if(!mIsInfinity) {
             mAttemptsLeft.setText((getString(R.string.attempts_left) + " " + String.valueOf(mAttempts) + "."));
-//            with answer:
-//            mAttemptsLeft.setText((getString(R.string.attempts_left) + " " + String.valueOf(mAttempts) + "." + "Answer: " + Arrays.toString(mRandomValue)));
         }
 
         final PinEntryEditText pinEntry = findViewById(R.id.txt_pin_entry);
@@ -95,7 +90,6 @@ public class GameActivity extends AppCompatActivity {
                                 }
                             }
 
-//                        Toast.makeText(GameActivity.this, ("Bulls: " + String.valueOf(mBulls) + ", and cows: " + String.valueOf(mCows)), Toast.LENGTH_SHORT).show();
                             gameHint.setText((str + " " + getString(R.string.contains) + " " + String.valueOf(mBulls) + " " + getString(R.string.bulls) + " " + String.valueOf(mCows) + " " + getString(R.string.cows)));
                             pinEntry.setText(null);
                             mBulls = mCows = 0;
@@ -107,9 +101,6 @@ public class GameActivity extends AppCompatActivity {
 
                                     Intent intent = MainActivity.newIntent(GameActivity.this, false, 0);
                                     startActivity(intent);
-
-//                                    Toast.makeText(GameActivity.this, "You lose", Toast.LENGTH_SHORT).show();
-//                                    mAttemptsLeft.setText(("You lose"));
                                 } else {
                                     mAttemptsLeft.setText((getString(R.string.attempts_left) + " " + String.valueOf(mAttempts) + "."));
                                 }
@@ -130,7 +121,6 @@ public class GameActivity extends AppCompatActivity {
                                 //go to main activity
                                 Intent intent = MainActivity.newIntent(GameActivity.this, true, mUserscore);
                                 startActivity(intent);
-//                            Toast.makeText(GameActivity.this, "You win", Toast.LENGTH_SHORT).show();
                             } else {
                                 Intent intent = MainActivity.newIntent(GameActivity.this, true, 0);
                                 startActivity(intent);
