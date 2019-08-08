@@ -51,11 +51,6 @@ public class HighScoresActivity extends AppCompatActivity {
                 boolean cCheck;
                 int winPlaces = 1;
 
-
-//        mRowsArray = new String[cursor.getCount()];
-//        int rowsIndex = 0;
-
-
                 do {
                     if (winPlaces <= 3) {
                         Spannable spText = new SpannableString(String.valueOf(winPlaces) + ". " + cursor.getString(cursor.getColumnIndex(DBHelper.KEY_SCORE)) + "\n");
